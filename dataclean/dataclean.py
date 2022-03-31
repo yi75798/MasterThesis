@@ -158,7 +158,7 @@ class Cleaner:
         self.df = pd.concat([self.df, w], axis=1)
         return self
     
-    def dataclean(self, k=10):
+    def clean_all(self, k=10):
         '''
         Clean data at once.
 
@@ -184,5 +184,5 @@ class Cleaner:
     
 
 if __name__ == '__main__':
-    clean_data = Cleaner('testdata.csv', 'codebook_year.xlsx').dataclean()
+    clean_data = Cleaner('testdata.csv', 'codebook_year.xlsx').clean_all()
     clean_data.output('testoutput.csv')
